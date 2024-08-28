@@ -12,13 +12,14 @@
 :root {
   --primaryColor1: #495e57;
   --primaryColor2: #f4ce14;
+  --secondaryColor1: #333333;
 }
 
 .App {
   text-align: center;
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,11 +29,32 @@ nav {
 
 li{
   list-style: none;
-  padding: 10px;
 }
 
 nav li{
   display: inline-flex;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links.visible {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  right: 0;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-nav-icon {
+  display: none;
+  cursor: pointer;
 }
 
 nav a {
@@ -66,7 +88,7 @@ footer a {
   font-family: "Karla";
   text-decoration: none;
   font-size: 18px;
-  color: var(--primaryColor1);
+  color: var(--secondaryColor1);
 }
 
 main{
@@ -74,12 +96,22 @@ main{
   background-color: var(--primaryColor1);
 }
 
-nav button {
-  visibility: hidden;
-}
 
-@media only screen and (max-width: 900px){
-  nav ul {
-    visibility: hidden;
+@media screen and (max-width: 900px){
+  .mobile-nav-icon{
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.visible {
+    display: flex;
+    z-index: 1000;
+    background-color: white;
   }
 }
+
+
+
+

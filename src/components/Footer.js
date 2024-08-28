@@ -1,4 +1,4 @@
-import footPic from "./pictures/restaurant.jpg"
+import footPic from "../pictures/restaurant.jpg";
 
 const Footer = () =>{
     return(
