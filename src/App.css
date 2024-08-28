@@ -1,38 +1,85 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primaryColor1: #495e57;
+  --primaryColor2: #f4ce14;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0px 10%;
+  padding-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+li{
+  list-style: none;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+nav li{
+  display: inline-flex;
+}
+
+nav a {
+  font-family: "Karla";
+  text-decoration: none;
+  font-size: 18px;
+  color: #495e57;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0px 10%;
+  padding-top: 20px;
+}
+
+footer img {
+  height: 150px;
+  border-radius: 16%;
+}
+
+footer h4 {
+  font-family: "Karla";
+  font-size: 20px;
+  font-style: bold;
+  color: var(--primaryColor1);
+}
+
+footer a {
+  font-family: "Karla";
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--primaryColor1);
+}
+
+main{
+  height: 1000px;
+  background-color: var(--primaryColor1);
+}
+
+nav button {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 900px){
+  nav ul {
+    visibility: hidden;
   }
 }
