@@ -149,12 +149,14 @@ header section {
   font-weight: var(--med);
   padding-bottom: 13%;
   overflow-wrap: break-word;
+  line-height: 150%;
 }
 
 .call-to-action h2 {
-  font-family: MarkMed;
+  font-family: Mark;
   font-size: 64px;
   color: var(--primaryColor2);
+  font-weight: var(--med);
 }
 
 .call-to-action h3 {
@@ -162,7 +164,7 @@ header section {
   font-size: 40px;
   color: var(--secondaryColor4);
   line-height: 0;
-  font-weight: 400;
+  font-weight: var(--normal);
 }
 
 button {
@@ -174,6 +176,35 @@ button {
   font-weight: var(--bold);
   cursor: pointer;
   font-size: 18px;
+}
+
+.review-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.review-card img{
+  border-radius: 50%;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.review-comment p {
+  width: 100%;
 }
 
 
@@ -193,6 +224,14 @@ button {
 
   .header-img {
     display: none;
+  }
+
+  .review-comment{
+    display: none;
+  }
+
+  .review-comment:first-child{
+    display: flex;
   }
 }
 
