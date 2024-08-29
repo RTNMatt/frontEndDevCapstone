@@ -13,6 +13,23 @@
   --primaryColor1: #495e57;
   --primaryColor2: #f4ce14;
   --secondaryColor1: #333333;
+  --secondaryColor2: #EE9972;
+  --secondaryColor3: #FBDABB;
+  --secondaryColor4: #EDEFEE;
+  --normal: 400;
+  --med: 500;
+  --bold: 700;
+  --extra: 800;
+}
+
+@font-face {
+  font-family: Mark;
+  src: url('../public/font/MarkaziText-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: Karla;
+  src: url('../public/font/Karla-VariableFont_wght.ttf');
 }
 
 .App {
@@ -24,7 +41,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 0px 10%;
-  padding-bottom: 20px;
+  padding: 20px 0px;
+  overflow: hidden;
 }
 
 li{
@@ -50,6 +68,7 @@ nav li{
   right: 0;
   align-items: center;
   transition: all 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 .mobile-nav-icon {
@@ -58,10 +77,11 @@ nav li{
 }
 
 nav a {
-  font-family: "Karla";
+  font-family: Karla;
   text-decoration: none;
   font-size: 18px;
   color: #495e57;
+  font-weight: var(--normal);
 }
 
 footer{
@@ -78,26 +98,86 @@ footer img {
 }
 
 footer h4 {
-  font-family: "Karla";
+  font-family: Karla;
   font-size: 20px;
   font-style: bold;
   color: var(--primaryColor1);
+  font-weight: var(--normal);
 }
 
 footer a {
-  font-family: "Karla";
+  font-family: Karla;
   text-decoration: none;
   font-size: 18px;
   color: var(--secondaryColor1);
+  font-weight: var(--normal);
 }
 
-main{
-  height: 1000px;
+header{
   background-color: var(--primaryColor1);
 }
 
+header section {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 2% 10%;
+  justify-content: space-between;
+  overflow: hidden;
+}
 
-@media screen and (max-width: 900px){
+.header-img {
+  background-image: url(./pictures/restauranfood.jpg);
+  width: 300px;
+  height: 300px;
+  border-radius: 16px;
+  background-position: center;
+  background-size: cover;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-to-action p{
+  max-width: 65ch;
+  font-family: Karla;
+  font-size: 18px;
+  font-weight: 100;
+  color: var(--secondaryColor4);
+  margin-top: 50px;
+  font-weight: var(--med);
+  padding-bottom: 13%;
+  overflow-wrap: break-word;
+}
+
+.call-to-action h2 {
+  font-family: MarkMed;
+  font-size: 64px;
+  color: var(--primaryColor2);
+}
+
+.call-to-action h3 {
+  font-family: Mark;
+  font-size: 40px;
+  color: var(--secondaryColor4);
+  line-height: 0;
+  font-weight: 400;
+}
+
+button {
+  background-color: var(--primaryColor2);
+  color: #333333;
+  padding: 5px 5px;
+  border-radius: 16px;
+  font-family: Karla;
+  font-weight: var(--bold);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+@media screen and (max-width: 1024px){
   .mobile-nav-icon{
     display: block;
   }
@@ -109,6 +189,10 @@ main{
     display: flex;
     z-index: 1000;
     background-color: white;
+  }
+
+  .header-img {
+    display: none;
   }
 }
 
