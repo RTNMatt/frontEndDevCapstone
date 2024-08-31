@@ -16,8 +16,7 @@ const Header = () =>{
                         <button>Reserve Table</button>
                     </Link>
                 </div>
-                <div className='header-img'>
-                </div>
+                <div className='header-img'/>
             </section>
         </header>
     );
