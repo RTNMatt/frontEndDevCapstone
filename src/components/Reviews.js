@@ -1,32 +1,21 @@
-import React from "react";
+import ReviewsCard from "./ReviewsCard";
 
 const Reviews = () =>{
-    const [user, setUser] = React.useState([]);
-
-        /*used random user pull for creating review names/pictures at random*/
-    const fetchData = () => {
-        fetch("https://randomuser.me/api/?results=1")
-        .then((response) => response.json())
-        .then((data) => setUser(data));
-    };
-
-    React.useEffect(() => {
-        fetchData();
-    }, []);
-
-    /*Return 5 star rating, name, picture or data pending based on fetch*/
-    return Object.keys(user).length > 0 ?(
-        <div className="review-card">
-            <>
-                <h3>☆☆☆☆☆</h3>
-                <h4>{user.results[0].name.first}</h4>
-            </>
-            <div>
-                <img src={user.results[0].picture.large} alt="" />
+    return(
+        <div className="review-container">
+            <div className="review-comment">
+            <ReviewsCard />
+            <p>The food was good but the view and decor really bring you in to make everything come together.</p>
+            </div>
+            <div className="review-comment">
+            <ReviewsCard />
+            <p>I couldn't of asked for better service than from Adrian!</p>
+            </div>
+            <div className="review-comment">
+            <ReviewsCard />
+            <p>I made a reservation for an anniversary and they surprised us with a cake and a special bottle of wine! You just can't find people who care like this anymore.</p>
             </div>
         </div>
-    ) : (
-        <p>Data Pending</p>
     );
 }
 

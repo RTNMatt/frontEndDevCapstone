@@ -207,6 +207,21 @@ button {
   width: 100%;
 }
 
+.no-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4ce14;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-page h1 {
+  font-family: Mark;
+  font-size: 64px;
+  font-weight: var(--med);
+}
+
 
 @media screen and (max-width: 1024px){
   .mobile-nav-icon{
