@@ -15,7 +15,7 @@ const Booking = () =>{
         initialValues: {
           reservationName: "",
           email: "",
-          type: "other",
+          type: "",
           date: "",
         },
         onSubmit: () => {
@@ -58,6 +58,7 @@ const Booking = () =>{
                                 <select id="type" name="type"
                                 {...formik.getFieldProps("type")}
                                 >
+                                    <option value=""></option>
                                 <option value="anniversary">Anniversary</option>
                                 <option value="birthday">Birthday</option>
                                 <option value="other">Other</option>
