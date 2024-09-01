@@ -20,6 +20,7 @@ function App() {
     <Routes> 
       <Route path="/" element={<Main/>}></Route>
       <Route path="/booking" element={<BookingPage />}></Route>
+      <Route path="confirmed" element={<NoPage />}></Route>
       <Route path="*" element={<NoPage />}></Route>
     </Routes>
 
