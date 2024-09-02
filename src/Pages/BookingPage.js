@@ -1,12 +1,12 @@
 
 import React from "react";
-import Booking from "../components/Booking";
+import BookingForm from "../components/BookingForm";
 
 
 const BookingPage = () =>{
     return(
         <main>
-            <Booking />
+            <BookingForm />
         </main>
     );
 }

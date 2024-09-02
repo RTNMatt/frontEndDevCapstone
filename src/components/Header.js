@@ -12,7 +12,7 @@ const Header = () =>{
                         traditional recipes served with a modern twist.
                     </p>
                     <Link to="/booking">
-                        <button>Reserve Table</button>
+                        <button aria-label="On Click">Reserve Table</button>
                     </Link>
                 </div>
                 <div className='header-img'/>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Booking = () =>{
+const BookingForm = () =>{
 
     const [date, setDate] = useState("");
     const [times, setTimes] = useState("");
@@ -100,4 +100,4 @@ const Booking = () =>{
 
 
 
-export default Booking;
+export default BookingForm;
